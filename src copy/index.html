@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/45d97c882a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="utf-8" />
+    <title>✅ TOP TODO</title>
+  </head>
+  <body>
+    <div id="page-container" class="grid grid-cols-4 gap-4">
+      <div
+        class="col-span-1 h-full p-4 bg-gray-100 border drop-shadow-sm"
+        id="sidebar"
+      >
+        <div
+          id="logo"
+          class="flex flex-row place-content-start tasks-center flex-shrink-0 mb-4"
+        >
+          <svg
+            height="auto"
+            width="24px"
+            stroke-miterlimit="10"
+            style="
+              fill-rule: nonzero;
+              clip-rule: evenodd;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+            "
+            version="1.1"
+            viewBox="0 0 24 24"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs />
+            <g id="Untitled">
+              <g opacity="1">
+                <path
+                  d="M8 6L21 6"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8 12L21 12"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8 18L21 18"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M3 6L3.01 6"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M3 12L3.01 12"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M3 18L3.01 18"
+                  fill="none"
+                  opacity="1"
+                  stroke="#333333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+            </g>
+          </svg>
+          <p class="font-bold text-xl text-gray-400">TADOO</p>
+        </div>
+
+        <div
+          class="flex flex-row align-content-center tasks-center w-100 place-content-between border-b-2 border-zinc-900 mb-2 pb-2"
+        >
+          <h2 class="text-lg font-bold text-gray-800">Your Projects</h2>
+
+          <button
+            class="text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white active:bg-gray-600 font-bold uppercase text-xs px-2 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 text-center align-middle"
+            type="button"
+            id="new-project-button"
+          >
+            +
+          </button>
+        </div>
+
+        <div id="project-titles-container" class="flex flex-col">
+          <ul id="project-titles" class="space-y-2">
+            <li
+              class="flex tasks-center text-gray-800 font-medium hover:bg-gray-300 p-2 rounded-lg transition"
+            >
+              <i class="fa-solid fa-list-check mr-2"></i>
+              Folder 1
+            </li>
+            <li
+              class="flex tasks-center text-gray-800 font-medium hover:bg-gray-300 p-2 rounded-lg transition"
+            >
+              <i class="fa-solid fa-project-check fa-project mr-2"></i>
+              Folder 2
+            </li>
+            <li
+              class="flex tasks-center text-gray-800 font-medium hover:bg-gray-300 p-2 rounded-lg transition"
+            >
+              <i class="fa-solid fa-project-check fa-project mr-2"></i>
+              Folder 2
+            </li>
+            <!-- Add more folder names as needed -->
+          </ul>
+        </div>
+      </div>
+      <div class="col-span-3 bg-gray-50" id="main">
+        <div class="h-3/6" id="body">
+          <div class="div">
+            <div
+              class="p-4 bg-gray-100 border rounded-lg border-gray-300 shadow-sm"
+            >
+              <div class="flex flex-col">
+                <div
+                  id="project-title-div"
+                  class="flex flex-row flex-shrink place-content-start"
+                >
+                  <h1 class="text-4xl">Name of the Project</h1>
+                  <button
+                    id="new-task-button"
+                    class="text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white active:bg-gray-600 font-bold uppercase text-xs px-2 py-1 rounded outline-none focus:outline-none ease-linear transition-all duration-150 text-center align-middle"
+                    type="button"
+                  >
+                    +
+                  </button>
+                </div>
+                <div
+                  id="progress-bar-bg"
+                  class="h-1 w-full mt-1 mb-1 rounded bg-gray-300"
+                >
+                  <div
+                    id="progress-bar-fill"
+                    class="h-1 bg-gray-500 rounded"
+                    style="width: 10%"
+                  ></div>
+                </div>
+              </div>
+              <div class="" id="task-card">
+                <form action="#" class="flex flex-row align-start w-full">
+                  <div class="mr-4" id="checkbox-div">
+                    <label for="completed-status" hidden
+                      >Completion Status</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="completed-status"
+                      id="completed-status"
+                      class="accent-gray-600"
+                    />
+                  </div>
+                  <div
+                    class="flex flex-col place-content-between w-full"
+                    id="middle-info"
+                  >
+                    <div
+                      class="flex flex-row place-content-between w-full"
+                      id="title-info"
+                    >
+                      <div
+                        class="flex place-content-between gap-2"
+                        id="title-left"
+                      >
+                        <input
+                          id="title-input"
+                          class="text-lg text-gray-800 font-medium w-full resize-none bg-gray-100 placeholder:text-gray-400 outline-0 focus:outline-none"
+                          value="New task!"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="flex place-content-between gap-4"
+                        id="title-left"
+                      >
+                        <div
+                          class="flex flex-col gap-1 h-full w-2"
+                          id="priority-markers"
+                        >
+                          <div class="grow bg-red-300" id="marker1"></div>
+                          <div class="grow bg-orange-300" id="marker2"></div>
+                          <div class="grow bg-green-300" id="marker3"></div>
+                        </div>
+                        <span
+                          id="place-flatpicker"
+                          class="flex px-2 py-1 grow-0 shrink-0 tasks-center text-xs leading-none bg-gray-300 text-gray-600 rounded-full gap-1"
+                        >
+                          Due
+                          <label for="due-date" hidden
+                            >Todo task due date</label
+                          >
+                          <input
+                            type="datetime-local"
+                            class="bg-transparent text-xs text-gray-600 font-bold"
+                            id="due-date"
+                            name="todo-due-date"
+                          />
+                        </span>
+                        <!-- <button
+                          class="inline-flex tasks-center justify-center w-8 h-8 mr-2 text-gray-700 transition-colors duration-150 bg-white rounded-full focus:shadow-outline hover:bg-gray-400"
+                        >
+                          <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                          >
+                            <path
+                              stroke="#000000"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M3.8 12.963L2 18l4.8-.63L18.11 6.58a2.612 2.612 0 00-3.601-3.785L3.8 12.963z"
+                            />
+                          </svg>
+                        </button> -->
+                      </div>
+                    </div>
+                    <div class="w-full pt-1" id="desc-info">
+                      <textarea
+                        class="w-full resize-none bg-transparent text-gray-400 placeholder:text-gray-400 outline-0 focus:outline-none"
+                        name="decription"
+                        id="decription"
+                        placeholder="Optional notes..."
+                      ></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
